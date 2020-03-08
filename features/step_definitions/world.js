@@ -19,18 +19,23 @@ class CustomWorld {
     await this.browser.close();
   }
 
-  async visit() {
-    await this.page.goto("www.amazon.com");
+  async visit(string) {
+    await this.page.goto("https://" + string);
   }
 
-  async selectOption() {
-    await this.page.waitForSelector("#s");
-    await this.page.click("#s", "122");
+  async selectOption(string) {
+    await this.page.waitForSelector(".nav-searchbar");
+    // await this.page.click("#s", "122");
+    // var e = document.getElementById("searchDropdownBox");
+    // var strUser = e.options[e.selectedIndex].text;
+    await this.page.click(strUser, string);
   }
-  async searchTest() {
+
+  async searchTest(string) {
     await this.page.waitForSelector("#input");
-    await this.page.type("#test", "Test automation");
+    await this.page.type("#test", string);
   }
+
   async selectBook() {
     await this.page.waitForSelector("#book");
     await this.page.click("#book", "12345678901");

@@ -8,19 +8,19 @@ After(async function() {
   return await this.closeBrowser();
 });
 
-Given("I navigate to “www.amazon.com”.", async function() {
-  return await this.visit();
+Given("I navigate to {string}.", async function(string) {
+  return await this.visit(string);
 });
 
 When(
-  "I select the option “Books” in the dropdown next to the search text input criteria.",
-  async function() {
-    return await this.selectOption();
+  "I select the option {string} in the dropdown next to the search text input criteria.",
+  async function(string) {
+    return await this.selectOption(string);
   }
 );
 
-Then("I search for “Test automation”.", async function() {
-  return await this.searchTest();
+Then("I search for {string}.", async function(string) {
+  return await this.searchTest(string);
 });
 
 When(

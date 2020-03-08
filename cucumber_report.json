@@ -1,0 +1,97 @@
+[
+  {
+    "description": "    Search book because of the challenge",
+    "keyword": "Feature",
+    "name": "Search Book",
+    "line": 1,
+    "id": "search-book",
+    "tags": [],
+    "uri": "features/specs/book.feature",
+    "elements": [
+      {
+        "id": "search-book;wex-brazil-qa-test",
+        "keyword": "Scenario",
+        "line": 5,
+        "name": "WEX Brazil QA Test",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/book_steps.js:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 462000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I navigate to \"www.amazon.com\".",
+            "match": {
+              "location": "features/step_definitions/book_steps.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2771000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "​I select the option \"Books\" in the dropdown next to the search text input criteria.",
+            "result": {
+              "status": "undefined"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "​I search for \"Test automation\".",
+            "result": {
+              "status": "undefined"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "​I select the cheapest book of the page without using any sorting method available.",
+            "result": {
+              "status": "undefined"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "I reach the detailed book page, I check if the name in the header is the same name of the book that I select previously.",
+            "match": {
+              "location": "features/step_definitions/book_steps.js:33"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/book_steps.js:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 53000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

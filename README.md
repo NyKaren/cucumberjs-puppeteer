@@ -4,7 +4,7 @@ Automation test with Cucumberjs, JS and Puppeteer for Wex challenge
 
 ## Running
 
-1- `npm start`
+1- `npm install`
 
 2- All tests: `npm run test`
 
