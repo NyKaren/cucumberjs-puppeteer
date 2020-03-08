@@ -24,7 +24,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 486000000
+              "duration": 450000000
             }
           },
           {
@@ -37,7 +37,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 4042000000
+              "duration": 5504000000
             }
           },
           {
@@ -49,9 +49,8 @@
               "location": "features/step_definitions/book_steps.js:15"
             },
             "result": {
-              "status": "failed",
-              "duration": 150000000,
-              "error_message": "Error: No node found for selector: #s\n    at assert (/home/karen/Documentos/cucumberjs-puppeteer/node_modules/puppeteer/lib/helper.js:283:11)\n    at DOMWorld.click (/home/karen/Documentos/cucumberjs-puppeteer/node_modules/puppeteer/lib/DOMWorld.js:366:5)\n    at runNextTicks (internal/process/task_queues.js:58:5)\n    at listOnTimeout (internal/timers.js:501:9)\n    at processTimers (internal/timers.js:475:7)\n    at async CustomWorld.selectOption (/home/karen/Documentos/cucumberjs-puppeteer/features/step_definitions/world.js:28:5)\n    at async CustomWorld.<anonymous> (/home/karen/Documentos/cucumberjs-puppeteer/features/step_definitions/book_steps.js:18:12)\n  -- ASYNC --\n    at Frame.<anonymous> (/home/karen/Documentos/cucumberjs-puppeteer/node_modules/puppeteer/lib/helper.js:111:15)\n    at Page.click (/home/karen/Documentos/cucumberjs-puppeteer/node_modules/puppeteer/lib/Page.js:1064:29)\n    at CustomWorld.selectOption (/home/karen/Documentos/cucumberjs-puppeteer/features/step_definitions/world.js:28:21)\n    at async CustomWorld.<anonymous> (/home/karen/Documentos/cucumberjs-puppeteer/features/step_definitions/book_steps.js:18:12)"
+              "status": "passed",
+              "duration": 145000000
             }
           },
           {
@@ -63,7 +62,8 @@
               "location": "features/step_definitions/book_steps.js:22"
             },
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 1562000000
             }
           },
           {
@@ -75,7 +75,9 @@
               "location": "features/step_definitions/book_steps.js:26"
             },
             "result": {
-              "status": "skipped"
+              "status": "failed",
+              "duration": 30015000000,
+              "error_message": "TimeoutError: waiting for selector \".a-size-medium a-color-base a-text-normal\" failed: timeout 30000ms exceeded\n    at new WaitTask (/home/karen/Documentos/cucumberjs-puppeteer/node_modules/puppeteer/lib/DOMWorld.js:549:28)\n    at DOMWorld._waitForSelectorOrXPath (/home/karen/Documentos/cucumberjs-puppeteer/node_modules/puppeteer/lib/DOMWorld.js:478:22)\n    at DOMWorld.waitForSelector (/home/karen/Documentos/cucumberjs-puppeteer/node_modules/puppeteer/lib/DOMWorld.js:432:17)\n    at Frame.waitForSelector (/home/karen/Documentos/cucumberjs-puppeteer/node_modules/puppeteer/lib/FrameManager.js:627:47)\n    at Frame.<anonymous> (/home/karen/Documentos/cucumberjs-puppeteer/node_modules/puppeteer/lib/helper.js:112:23)\n    at Page.waitForSelector (/home/karen/Documentos/cucumberjs-puppeteer/node_modules/puppeteer/lib/Page.js:1122:29)\n    at CustomWorld.selectBook (/home/karen/Documentos/cucumberjs-puppeteer/features/step_definitions/world.js:41:21)\n    at CustomWorld.<anonymous> (/home/karen/Documentos/cucumberjs-puppeteer/features/step_definitions/book_steps.js:29:23)"
             }
           },
           {
@@ -98,7 +100,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 100000000
+              "duration": 135000000
             }
           }
         ]

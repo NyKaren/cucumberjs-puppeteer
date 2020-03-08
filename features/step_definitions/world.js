@@ -32,13 +32,16 @@ class CustomWorld {
   }
 
   async searchTest(string) {
-    await this.page.waitForSelector("#input");
-    await this.page.type("#test", string);
+    await this.page.waitForSelector("#twotabsearchtextbox");
+    await this.page.type("#twotabsearchtextbox", string);
+    await this.page.click("input.nav-input");
   }
 
   async selectBook() {
-    await this.page.waitForSelector("#book");
-    await this.page.click("#book", "12345678901");
+    await this.page.waitForSelector(
+      ".a-size-medium a-color-base a-text-normal"
+    );
+    await this.page.click(".a-size-medium a-color-base a-text-normal");
   }
 
   async verifyBookName() {
