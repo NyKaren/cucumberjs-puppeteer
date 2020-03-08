@@ -24,10 +24,10 @@ class CustomWorld {
   }
 
   async selectOption(string) {
-    await this.page.waitForSelector(".nav-searchbar");
-    // await this.page.click("#s", "122");
-    // var e = document.getElementById("searchDropdownBox");
-    // var strUser = e.options[e.selectedIndex].text;
+    await this.page.waitForSelector("#searchDropdownBox");
+    await this.page.click("#s", "122");
+    var e = document.getElementById("searchDropdownBox");
+    var strUser = e.options[e.selectedIndex].text;
     await this.page.click(strUser, string);
   }
 

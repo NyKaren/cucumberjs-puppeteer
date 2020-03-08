@@ -1,4 +1,4 @@
-const { Given, When, Then, Before, After } = require("cucumber");
+const { Given, When, And, Then, Before, After } = require("cucumber");
 
 Before(async function() {
   return await this.launchBrowser();
@@ -13,18 +13,18 @@ Given("I navigate to {string}.", async function(string) {
 });
 
 When(
-  "I select the option {string} in the dropdown next to the search text input criteria.",
+  "​I select the option {string} in the dropdown next to the search text input criteria.",
   async function(string) {
     return await this.selectOption(string);
   }
 );
 
-Then("I search for {string}.", async function(string) {
+Then("​I search for {string}.", async function(string) {
   return await this.searchTest(string);
 });
 
 When(
-  "I select the cheapest book of the page without using any sorting method available.",
+  "​I select the cheapest book of the page without using any sorting method available.",
   async function() {
     return await this.selectBook();
   }
