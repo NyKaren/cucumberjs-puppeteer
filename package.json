@@ -1,0 +1,18 @@
+{
+  "name": "cucumberjs-puppetteer",
+  "version": "1.0.0",
+  "description": "cucumber js cucumber-html-reporter puppetteer",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js -f json:cucumber_report.json",
+    "generate:report": "node report.js"
+  },
+  "author": "Karen Botelho",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "cucumber": "^6.0.5",
+    "cucumber-html-reporter": "^5.1.0",
+    "puppeteer": "^2.1.1"
+  }
+}
