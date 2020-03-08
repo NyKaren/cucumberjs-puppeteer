@@ -3,17 +3,39 @@
     "description": "    Search book because of the challenge",
     "keyword": "Feature",
     "name": "Search Book",
-    "line": 1,
+    "line": 2,
     "id": "search-book",
-    "tags": [],
+    "tags": [
+      {
+        "name": "@search_book",
+        "line": 1
+      },
+      {
+        "name": "@smoke",
+        "line": 1
+      }
+    ],
     "uri": "features/specs/book.feature",
     "elements": [
       {
         "id": "search-book;wex-brazil-qa-test",
         "keyword": "Scenario",
-        "line": 5,
+        "line": 7,
         "name": "WEX Brazil QA Test",
-        "tags": [],
+        "tags": [
+          {
+            "name": "@search_book",
+            "line": 1
+          },
+          {
+            "name": "@smoke",
+            "line": 1
+          },
+          {
+            "name": "@qa_test",
+            "line": 6
+          }
+        ],
         "type": "scenario",
         "steps": [
           {
@@ -24,72 +46,73 @@
             },
             "result": {
               "status": "passed",
-              "duration": 487000000
+              "duration": 479000000
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 6,
+            "line": 8,
             "name": "I navigate to \"www.amazon.com\".",
             "match": {
               "location": "features/step_definitions/book_steps.js:11"
             },
             "result": {
               "status": "passed",
-              "duration": 2807000000
+              "duration": 2822000000
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 7,
+            "line": 9,
             "name": "​I select the option \"Books\" in the dropdown next to the search text input criteria.",
             "match": {
               "location": "features/step_definitions/book_steps.js:15"
             },
             "result": {
               "status": "passed",
-              "duration": 489000000
+              "duration": 464000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 8,
+            "line": 10,
             "name": "​I search for \"Test automation\".",
             "match": {
               "location": "features/step_definitions/book_steps.js:22"
             },
             "result": {
               "status": "passed",
-              "duration": 1618000000
+              "duration": 1546000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 9,
+            "line": 11,
             "name": "​I select the cheapest book of the page without using any sorting method available.",
             "match": {
               "location": "features/step_definitions/book_steps.js:26"
             },
             "result": {
-              "status": "failed",
-              "duration": 30010000000,
-              "error_message": "TimeoutError: waiting for selector \".a-size-base-plus a-color-base a-text-normal\" failed: timeout 30000ms exceeded\n    at new WaitTask (/home/karen/Documentos/cucumberjs-puppeteer/node_modules/puppeteer/lib/DOMWorld.js:549:28)\n    at DOMWorld._waitForSelectorOrXPath (/home/karen/Documentos/cucumberjs-puppeteer/node_modules/puppeteer/lib/DOMWorld.js:478:22)\n    at DOMWorld.waitForSelector (/home/karen/Documentos/cucumberjs-puppeteer/node_modules/puppeteer/lib/DOMWorld.js:432:17)\n    at Frame.waitForSelector (/home/karen/Documentos/cucumberjs-puppeteer/node_modules/puppeteer/lib/FrameManager.js:627:47)\n    at Frame.<anonymous> (/home/karen/Documentos/cucumberjs-puppeteer/node_modules/puppeteer/lib/helper.js:112:23)\n    at Page.waitForSelector (/home/karen/Documentos/cucumberjs-puppeteer/node_modules/puppeteer/lib/Page.js:1122:29)\n    at CustomWorld.selectBook (/home/karen/Documentos/cucumberjs-puppeteer/features/step_definitions/world.js:42:21)\n    at CustomWorld.<anonymous> (/home/karen/Documentos/cucumberjs-puppeteer/features/step_definitions/book_steps.js:29:23)"
+              "status": "passed",
+              "duration": 1774000000
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 10,
+            "line": 12,
             "name": "I reach the detailed book page, I check if the name in the header is the same name of the book that I select previously.",
             "match": {
               "location": "features/step_definitions/book_steps.js:33"
             },
             "result": {
-              "status": "skipped"
+              "status": "failed",
+              "duration": 30005000000,
+              "error_message": "TimeoutError: waiting for selector \"#productTitle\" failed: timeout 30000ms exceeded\n    at new WaitTask (/home/karen/Documentos/cucumberjs-puppeteer/node_modules/puppeteer/lib/DOMWorld.js:549:28)\n    at DOMWorld._waitForSelectorOrXPath (/home/karen/Documentos/cucumberjs-puppeteer/node_modules/puppeteer/lib/DOMWorld.js:478:22)\n    at DOMWorld.waitForSelector (/home/karen/Documentos/cucumberjs-puppeteer/node_modules/puppeteer/lib/DOMWorld.js:432:17)\n    at Frame.waitForSelector (/home/karen/Documentos/cucumberjs-puppeteer/node_modules/puppeteer/lib/FrameManager.js:627:47)\n    at Frame.<anonymous> (/home/karen/Documentos/cucumberjs-puppeteer/node_modules/puppeteer/lib/helper.js:112:23)\n    at Page.waitForSelector (/home/karen/Documentos/cucumberjs-puppeteer/node_modules/puppeteer/lib/Page.js:1122:29)\n    at CustomWorld.verifyBookName (/home/karen/Documentos/cucumberjs-puppeteer/features/step_definitions/world.js:62:21)\n    at CustomWorld.<anonymous> (/home/karen/Documentos/cucumberjs-puppeteer/features/step_definitions/book_steps.js:36:23)"
             }
           },
           {
@@ -100,7 +123,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 73000000
+              "duration": 76000000
             }
           }
         ]
