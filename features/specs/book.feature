@@ -1,7 +1,9 @@
+@searchBook @smoketest
 Feature: Search Book
 
     Search book because of the challenge
 
+    @qaTest
     Scenario: WEX Brazil QA Test
         Given I navigate to "www.amazon.com".
         When ​I select the option "Books" in the dropdown next to the search text input criteria.
