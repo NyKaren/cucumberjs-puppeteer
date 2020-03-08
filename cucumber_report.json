@@ -24,7 +24,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 450000000
+              "duration": 487000000
             }
           },
           {
@@ -37,7 +37,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 5504000000
+              "duration": 2807000000
             }
           },
           {
@@ -50,7 +50,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 145000000
+              "duration": 489000000
             }
           },
           {
@@ -63,7 +63,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1562000000
+              "duration": 1618000000
             }
           },
           {
@@ -76,8 +76,8 @@
             },
             "result": {
               "status": "failed",
-              "duration": 30015000000,
-              "error_message": "TimeoutError: waiting for selector \".a-size-medium a-color-base a-text-normal\" failed: timeout 30000ms exceeded\n    at new WaitTask (/home/karen/Documentos/cucumberjs-puppeteer/node_modules/puppeteer/lib/DOMWorld.js:549:28)\n    at DOMWorld._waitForSelectorOrXPath (/home/karen/Documentos/cucumberjs-puppeteer/node_modules/puppeteer/lib/DOMWorld.js:478:22)\n    at DOMWorld.waitForSelector (/home/karen/Documentos/cucumberjs-puppeteer/node_modules/puppeteer/lib/DOMWorld.js:432:17)\n    at Frame.waitForSelector (/home/karen/Documentos/cucumberjs-puppeteer/node_modules/puppeteer/lib/FrameManager.js:627:47)\n    at Frame.<anonymous> (/home/karen/Documentos/cucumberjs-puppeteer/node_modules/puppeteer/lib/helper.js:112:23)\n    at Page.waitForSelector (/home/karen/Documentos/cucumberjs-puppeteer/node_modules/puppeteer/lib/Page.js:1122:29)\n    at CustomWorld.selectBook (/home/karen/Documentos/cucumberjs-puppeteer/features/step_definitions/world.js:41:21)\n    at CustomWorld.<anonymous> (/home/karen/Documentos/cucumberjs-puppeteer/features/step_definitions/book_steps.js:29:23)"
+              "duration": 30010000000,
+              "error_message": "TimeoutError: waiting for selector \".a-size-base-plus a-color-base a-text-normal\" failed: timeout 30000ms exceeded\n    at new WaitTask (/home/karen/Documentos/cucumberjs-puppeteer/node_modules/puppeteer/lib/DOMWorld.js:549:28)\n    at DOMWorld._waitForSelectorOrXPath (/home/karen/Documentos/cucumberjs-puppeteer/node_modules/puppeteer/lib/DOMWorld.js:478:22)\n    at DOMWorld.waitForSelector (/home/karen/Documentos/cucumberjs-puppeteer/node_modules/puppeteer/lib/DOMWorld.js:432:17)\n    at Frame.waitForSelector (/home/karen/Documentos/cucumberjs-puppeteer/node_modules/puppeteer/lib/FrameManager.js:627:47)\n    at Frame.<anonymous> (/home/karen/Documentos/cucumberjs-puppeteer/node_modules/puppeteer/lib/helper.js:112:23)\n    at Page.waitForSelector (/home/karen/Documentos/cucumberjs-puppeteer/node_modules/puppeteer/lib/Page.js:1122:29)\n    at CustomWorld.selectBook (/home/karen/Documentos/cucumberjs-puppeteer/features/step_definitions/world.js:42:21)\n    at CustomWorld.<anonymous> (/home/karen/Documentos/cucumberjs-puppeteer/features/step_definitions/book_steps.js:29:23)"
             }
           },
           {
@@ -100,7 +100,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 135000000
+              "duration": 73000000
             }
           }
         ]

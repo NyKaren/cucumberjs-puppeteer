@@ -2,6 +2,8 @@ const { setWorldConstructor, setDefaultTimeout } = require("cucumber");
 const { expect } = require("chai");
 const puppeteer = require("puppeteer");
 
+var nameBookChose = "";
+
 class CustomWorld {
   async launchBrowser() {
     this.browser = await puppeteer.launch({
@@ -25,10 +27,8 @@ class CustomWorld {
 
   async selectOption(string) {
     await this.page.waitForSelector("#searchDropdownBox");
-    await this.page.click("#s", "122");
-    var e = document.getElementById("searchDropdownBox");
-    var strUser = e.options[e.selectedIndex].text;
-    await this.page.click(strUser, string);
+    const selectElem = await this.page.$('select[id="searchDropdownBox"]');
+    await selectElem.type(string);
   }
 
   async searchTest(string) {
@@ -39,22 +39,24 @@ class CustomWorld {
 
   async selectBook() {
     await this.page.waitForSelector(
-      ".a-size-medium a-color-base a-text-normal"
+      ".a-size-base-plus a-color-base a-text-normal"
     );
-    await this.page.click(".a-size-medium a-color-base a-text-normal");
+    nameBookChose = await this.page.content(
+      (".a-size-base-plus a-color-base a-text-normall", text, { delay: 10000 })
+    );
+    await this.page.click(".a-size-base-plus a-color-base a-text-normal");
   }
 
   async verifyBookName() {
     await this.page.waitForSelector(".panel_content");
 
-    const text = "User doesn't found.";
     const content = await this.page.content(
       (".panel_content", text, { delay: 10000 })
     );
 
-    if (!content.includes(text))
+    if (!content.includes(nameBookChose))
       throw new Error(
-        `Expected page to contain text: ${text}, but page contains only: ${content}`
+        `Expected page to contain text: ${nameBookChose}, but page contains only: ${content}`
       );
   }
 }
