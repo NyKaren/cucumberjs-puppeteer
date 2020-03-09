@@ -46,7 +46,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 479000000
+              "duration": 458000000
             }
           },
           {
@@ -59,7 +59,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2822000000
+              "duration": 2928000000
             }
           },
           {
@@ -72,7 +72,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 464000000
+              "duration": 553000000
             }
           },
           {
@@ -85,7 +85,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1546000000
+              "duration": 1629000000
             }
           },
           {
@@ -98,7 +98,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1774000000
+              "duration": 12168000000
             }
           },
           {
@@ -110,9 +110,8 @@
               "location": "features/step_definitions/book_steps.js:33"
             },
             "result": {
-              "status": "failed",
-              "duration": 30005000000,
-              "error_message": "TimeoutError: waiting for selector \"#productTitle\" failed: timeout 30000ms exceeded\n    at new WaitTask (/home/karen/Documentos/cucumberjs-puppeteer/node_modules/puppeteer/lib/DOMWorld.js:549:28)\n    at DOMWorld._waitForSelectorOrXPath (/home/karen/Documentos/cucumberjs-puppeteer/node_modules/puppeteer/lib/DOMWorld.js:478:22)\n    at DOMWorld.waitForSelector (/home/karen/Documentos/cucumberjs-puppeteer/node_modules/puppeteer/lib/DOMWorld.js:432:17)\n    at Frame.waitForSelector (/home/karen/Documentos/cucumberjs-puppeteer/node_modules/puppeteer/lib/FrameManager.js:627:47)\n    at Frame.<anonymous> (/home/karen/Documentos/cucumberjs-puppeteer/node_modules/puppeteer/lib/helper.js:112:23)\n    at Page.waitForSelector (/home/karen/Documentos/cucumberjs-puppeteer/node_modules/puppeteer/lib/Page.js:1122:29)\n    at CustomWorld.verifyBookName (/home/karen/Documentos/cucumberjs-puppeteer/features/step_definitions/world.js:62:21)\n    at CustomWorld.<anonymous> (/home/karen/Documentos/cucumberjs-puppeteer/features/step_definitions/book_steps.js:36:23)"
+              "status": "passed",
+              "duration": 1390000000
             }
           },
           {
@@ -123,7 +122,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 76000000
+              "duration": 66000000
             }
           }
         ]
