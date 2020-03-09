@@ -51,8 +51,11 @@ class CustomWorld {
       const text = await this.page.evaluate(el => {
         return el.textContent;
       }, selectElemBook);
-      prices[i] = text;
       console.log(text);
+      const res = text.replace("$", "");
+      let numero;
+      numero = Number(res);
+      prices[i] = numero;
       console.log("/n" + "Price in list: " + prices[i] + "/n");
     }
     await delay(10000);
