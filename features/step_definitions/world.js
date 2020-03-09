@@ -41,14 +41,18 @@ class CustomWorld {
 
   async selectBook() {
     await this.page.waitForSelector("#twotabsearchtextbox");
+    var size = (await this.page.$x('//*[@class="a-offscreen"]')).length;
+    console.log(size);
 
-    const selectElemBook =(await this.page.$x('//*[@class="a-offscreen"]'))[0];
+    for (var i = 0; i < (await this.page.$x('//*[@class="a-offscreen"]')).length; i++) {
+      const selectElemBook = (await this.page.$x('//*[@class="a-offscreen"]'))[i];
 
-    const text = await this.page.evaluate(el => {
-      return el.textContent;
-    }, selectElemBook);
+      const text = await this.page.evaluate(el => {
+        return el.textContent;
+      }, selectElemBook);
 
-    console.log(text);
+      console.log(text);
+    }
     await delay(10000);
     // ToDo discover how I can click on the book price
     await selectElemBook.click();

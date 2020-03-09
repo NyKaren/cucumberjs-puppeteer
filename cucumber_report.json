@@ -46,7 +46,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 458000000
+              "duration": 495000000
             }
           },
           {
@@ -59,7 +59,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2928000000
+              "duration": 3053000000
             }
           },
           {
@@ -72,7 +72,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 553000000
+              "duration": 572000000
             }
           },
           {
@@ -85,7 +85,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1629000000
+              "duration": 1592000000
             }
           },
           {
@@ -97,8 +97,9 @@
               "location": "features/step_definitions/book_steps.js:26"
             },
             "result": {
-              "status": "passed",
-              "duration": 12168000000
+              "status": "failed",
+              "duration": 16964000000,
+              "error_message": "ReferenceError: selectElemBook is not defined\n    at CustomWorld.selectBook (/home/karen/Documentos/cucumberjs-puppeteer/features/step_definitions/world.js:58:5)\n    at async CustomWorld.<anonymous> (/home/karen/Documentos/cucumberjs-puppeteer/features/step_definitions/book_steps.js:29:12)"
             }
           },
           {
@@ -110,8 +111,7 @@
               "location": "features/step_definitions/book_steps.js:33"
             },
             "result": {
-              "status": "passed",
-              "duration": 1390000000
+              "status": "skipped"
             }
           },
           {
@@ -122,7 +122,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 66000000
+              "duration": 65000000
             }
           }
         ]
