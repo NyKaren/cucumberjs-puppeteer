@@ -3,6 +3,7 @@ const { expect } = require("chai");
 const puppeteer = require("puppeteer");
 
 const delay = duration => new Promise(resolve => setTimeout(resolve, duration));
+var nameBookChose;
 
 class CustomWorld {
   async launchBrowser() {
@@ -63,30 +64,34 @@ class CustomWorld {
       }
     }
 
-    console.log("/n" + "Minor price: " + minor_price + "/n");
-    console.log(number_minor_price);
     const selectElemBookPriceMinor = (await this.page.$x('//*[@class="a-offscreen"]'))[number_minor_price];
 
-    const nameBookChoseElement = (await this.page.$x('//*[@class="sg-row"]'))[number_minor_price];
-    const nameBookChose = await this.page.evaluate(el => {
+    const nameBookChoseElement = (await this.page.$x('//div[@class="sg-row"]'))[number_minor_price];
+    nameBookChose = await this.page.evaluate(el => {
       return el.textContent;
     }, nameBookChoseElement);
-    console.log("/n" + "Book with minor price: " + nameBookChose + "/n");
-    await delay(10000);
     await selectElemBookPriceMinor.click();
   }
 
   async verifyBookName() {
     var text;
-    await this.page.waitForSelector("#productTitle");
+    await this.page.waitForSelector("#twotabsearchtextbox");
+
+
+    const nameBookDetailElement = await this.page.$x('//span[@id="productTitle"]');
+    const nameBookDetail = await this.page.evaluate(el => {
+      return el.textContent;
+    }, nameBookDetailElement);
 
     const content = await this.page.content(
-      ("#productTitle", text, { delay: 10000 })
+        (nameBookChose, text, { delay: 10000 })
     );
 
-    if (!content.includes(text))
+    console.log(nameBookDetail);
+
+    if (!content.includes(nameBookDetail))
       throw new Error(
-        `Expected page to contain text: ${nameBookChose}, but page contains only: ${content}`
+        `Expected page to contain text: ${nameBookChose}, but page contains only: ${nameBookDetail}`
       );
   }
 }
