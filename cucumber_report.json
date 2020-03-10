@@ -46,7 +46,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 541000000
+              "duration": 460000000
             }
           },
           {
@@ -59,7 +59,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2828000000
+              "duration": 2748000000
             }
           },
           {
@@ -72,7 +72,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 543000000
+              "duration": 563000000
             }
           },
           {
@@ -85,7 +85,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1686000000
+              "duration": 1679000000
             }
           },
           {
@@ -98,7 +98,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 5676000000
+              "duration": 15838000000
             }
           },
           {
@@ -111,8 +111,8 @@
             },
             "result": {
               "status": "failed",
-              "duration": 30006000000,
-              "error_message": "TimeoutError: waiting for selector \"#productTitle\" failed: timeout 30000ms exceeded\n    at new WaitTask (/home/karen/Documentos/cucumberjs-puppeteer/node_modules/puppeteer/lib/DOMWorld.js:549:28)\n    at DOMWorld._waitForSelectorOrXPath (/home/karen/Documentos/cucumberjs-puppeteer/node_modules/puppeteer/lib/DOMWorld.js:478:22)\n    at DOMWorld.waitForSelector (/home/karen/Documentos/cucumberjs-puppeteer/node_modules/puppeteer/lib/DOMWorld.js:432:17)\n    at Frame.waitForSelector (/home/karen/Documentos/cucumberjs-puppeteer/node_modules/puppeteer/lib/FrameManager.js:627:47)\n    at Frame.<anonymous> (/home/karen/Documentos/cucumberjs-puppeteer/node_modules/puppeteer/lib/helper.js:112:23)\n    at Page.waitForSelector (/home/karen/Documentos/cucumberjs-puppeteer/node_modules/puppeteer/lib/Page.js:1122:29)\n    at CustomWorld.verifyBookName (/home/karen/Documentos/cucumberjs-puppeteer/features/step_definitions/world.js:78:21)\n    at CustomWorld.<anonymous> (/home/karen/Documentos/cucumberjs-puppeteer/features/step_definitions/book_steps.js:36:23)"
+              "duration": 30014000000,
+              "error_message": "TimeoutError: waiting for selector \"#productTitle\" failed: timeout 30000ms exceeded\n    at new WaitTask (/home/karen/Documentos/cucumberjs-puppeteer/node_modules/puppeteer/lib/DOMWorld.js:549:28)\n    at DOMWorld._waitForSelectorOrXPath (/home/karen/Documentos/cucumberjs-puppeteer/node_modules/puppeteer/lib/DOMWorld.js:478:22)\n    at DOMWorld.waitForSelector (/home/karen/Documentos/cucumberjs-puppeteer/node_modules/puppeteer/lib/DOMWorld.js:432:17)\n    at Frame.waitForSelector (/home/karen/Documentos/cucumberjs-puppeteer/node_modules/puppeteer/lib/FrameManager.js:627:47)\n    at Frame.<anonymous> (/home/karen/Documentos/cucumberjs-puppeteer/node_modules/puppeteer/lib/helper.js:112:23)\n    at Page.waitForSelector (/home/karen/Documentos/cucumberjs-puppeteer/node_modules/puppeteer/lib/Page.js:1122:29)\n    at CustomWorld.verifyBookName (/home/karen/Documentos/cucumberjs-puppeteer/features/step_definitions/world.js:81:21)\n    at CustomWorld.<anonymous> (/home/karen/Documentos/cucumberjs-puppeteer/features/step_definitions/book_steps.js:36:23)"
             }
           },
           {
@@ -123,7 +123,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 95000000
+              "duration": 104000000
             }
           }
         ]

@@ -4,8 +4,6 @@ const puppeteer = require("puppeteer");
 
 const delay = duration => new Promise(resolve => setTimeout(resolve, duration));
 
-var nameBookChose = "";
-
 class CustomWorld {
   async launchBrowser() {
     this.browser = await puppeteer.launch({
@@ -42,7 +40,6 @@ class CustomWorld {
   async selectBook() {
     await this.page.waitForSelector("#twotabsearchtextbox");
     var size = (await this.page.$x('//*[@class="a-offscreen"]')).length;
-    console.log(size);
     var prices = [];
 
     for (var i = 0; i < (await this.page.$x('//*[@class="a-offscreen"]')).length; i++) {
@@ -56,7 +53,6 @@ class CustomWorld {
       let to_number;
       to_number = Number(res);
       prices[i] = to_number;
-      console.log("/n" + "Price in list: " + prices[i] + "/n");
     }
     var minor_price = prices[0];
     var number_minor_price = 0;
@@ -68,8 +64,15 @@ class CustomWorld {
     }
 
     console.log("/n" + "Minor price: " + minor_price + "/n");
+    console.log(number_minor_price);
     const selectElemBookPriceMinor = (await this.page.$x('//*[@class="a-offscreen"]'))[number_minor_price];
 
+    const nameBookChoseElement = (await this.page.$x('//*[@class="sg-row"]'))[number_minor_price];
+    const nameBookChose = await this.page.evaluate(el => {
+      return el.textContent;
+    }, nameBookChoseElement);
+    console.log("/n" + "Book with minor price: " + nameBookChose + "/n");
+    await delay(10000);
     await selectElemBookPriceMinor.click();
   }
 
