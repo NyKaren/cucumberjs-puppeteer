@@ -78,20 +78,19 @@ class CustomWorld {
     await this.page.waitForSelector("#twotabsearchtextbox");
 
 
-    const nameBookDetailElement = await this.page.$x('//span[@id="productTitle"]');
-    const nameBookDetail = await this.page.evaluate(el => {
-      return el.textContent;
-    }, nameBookDetailElement);
+    const nameBookDetailElement = await this.page.$x('//*[@id="title"]');
 
     const content = await this.page.content(
         (nameBookChose, text, { delay: 10000 })
     );
 
-    console.log(nameBookDetail);
+    const content2 = await this.page.content(
+        (nameBookDetailElement, text, { delay: 10000 })
+    );
 
-    if (!content.includes(nameBookDetail))
+    if (!content.includes(content2))
       throw new Error(
-        `Expected page to contain text: ${nameBookChose}, but page contains only: ${nameBookDetail}`
+        `Expected page to contain text: ${nameBookChose}, but page contains only: ${content2}`
       );
   }
 }
