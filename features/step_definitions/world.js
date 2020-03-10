@@ -51,16 +51,26 @@ class CustomWorld {
       const text = await this.page.evaluate(el => {
         return el.textContent;
       }, selectElemBook);
-      console.log(text);
+
       const res = text.replace("$", "");
-      let numero;
-      numero = Number(res);
-      prices[i] = numero;
+      let to_number;
+      to_number = Number(res);
+      prices[i] = to_number;
       console.log("/n" + "Price in list: " + prices[i] + "/n");
     }
-    await delay(10000);
-    // ToDo discover how I can click on the book price
-    await selectElemBook.click();
+    var minor_price = prices[0];
+    var number_minor_price = 0;
+    for (var i = 0; i < prices.length; i++) {
+      if(prices[i] < minor_price) {
+        minor_price = prices[i];
+        number_minor_price = i;
+      }
+    }
+
+    console.log("/n" + "Minor price: " + minor_price + "/n");
+    const selectElemBookPriceMinor = (await this.page.$x('//*[@class="a-offscreen"]'))[number_minor_price];
+
+    await selectElemBookPriceMinor.click();
   }
 
   async verifyBookName() {
